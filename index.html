@@ -481,8 +481,9 @@
 </style>
 
 <script>
-document.getElementById("hotline-map").addEventListener("click", function(event) {
+document.getElementById("hotline-map").addEventListener("click", function (event) {
   event.preventDefault();
+
   const button = document.getElementById("hotline-map");
   button.innerText = "Locating...";
 
@@ -492,11 +493,11 @@ document.getElementById("hotline-map").addEventListener("click", function(event)
         const lat = position.coords.latitude;
         const lng = position.coords.longitude;
 
-        // Waze URL for nearest hospital
-        const wazeURL = `https://waze.com/ul?ll=${lat},${lng}&navigate=yes&zoom=16&query=hospital`;
+        // Google Maps: Search for nearest hospital
+        const gmapsURL = `https://www.google.com/maps/search/hospital/@${lat},${lng},17z`;
 
-        // Redirect user to Waze
-        window.open(wazeURL, "_blank");
+        // Open Google Maps
+        window.open(gmapsURL, "_blank");
 
         // Restore button text
         button.innerText = "🗺️ View on Map";
@@ -511,6 +512,8 @@ document.getElementById("hotline-map").addEventListener("click", function(event)
     button.innerText = "📍 View Nearest Hospital";
   }
 });
+</script>
+
 
 
 
@@ -558,4 +561,5 @@ document.getElementById("hotline-map").addEventListener("click", function(event)
   </script>
 </body>
 </html>
+
 
