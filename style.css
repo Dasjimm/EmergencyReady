@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #ff0000, #ffffff) !important;
+  background: linear-gradient(135deg, #040404, #070707) !important;
   color: #333;
   min-height: 100vh;
   display: flex;
@@ -90,7 +90,7 @@ body {
 
 .title-content h2 {
   font-size: 2.2rem;
-  color: #ff4d4d;
+  color: #f9f7f7;
   font-weight: 800;
   margin-bottom: 0.6rem;
   text-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
@@ -205,7 +205,7 @@ body {
 
 .content-box h2 {
   font-size: 1.8rem;
-  color: #c62828;
+  color: #f7f5f5;
   margin-bottom: 1rem;
 }
 
@@ -435,7 +435,7 @@ body {
 
 .title-box h2 {
   font-size: 1.8rem;
-  color: #ff4d4d;
+  color: #fafafa;
 }
 
 .title-box p {
@@ -477,7 +477,7 @@ body {
 .card h3 {
   margin: 15px 0;
   font-size: 1.3rem;
-  color: #ff4d4d;
+  color: #f9f7f7;
 }
 
 
