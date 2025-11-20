@@ -747,3 +747,28 @@ footer {
 body {
   overflow-x: hidden;
 }
+/* Smaller footer for mobile */
+@media (max-width: 600px) {
+  footer {
+    padding: 4px 10px; 
+    font-size: 0.7rem;
+  }
+
+  .bottom-hotline h2 {
+    font-size: 0.7rem;
+  }
+
+  .hotline-item {
+    padding: 6px 10px;
+    font-size: 0.7rem;
+    border-radius: 15px;
+  }
+
+  /* More space at the bottom of content so last card is visible */
+  main, 
+  .content-box,
+  .container {
+    padding-bottom: 120px !important;
+  }
+}
+
