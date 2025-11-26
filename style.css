@@ -748,11 +748,14 @@ body {
   overflow-x: hidden;
 }
 @media (max-width: 600px) {
+  .bottom-hotline,
+  #hotlines,
+  .hotline-footer,
   footer {
-    padding: 10px 15px;   /* smaller height */
-    font-size: 0.85rem;   /* smaller text */
-    height: auto;         /* let it shrink naturally */
+    margin-top: 60px !important;  /* moves the hotline footer downward */
   }
+}
+
 
   .hotline-list {
     gap: 6px;   /* smaller spacing */
