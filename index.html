@@ -17,7 +17,7 @@
   <main class="container">
     <section id="home" class="page active">
   <div class="title-box">
-    <img src="RRPostHead.webp" alt="Emergency Guide" class="title-image">
+    <img src="RRPostHead.webp" alt="RRPostHead" class="title-image">
     <div class="title-content">
       <h2>Your Quick Emergency Guide</h2>
       <p>Stay calm. Click on a guide below to learn what to do until help arrives.</p>
@@ -28,21 +28,21 @@
       <section class="card-grid">
         <div class="card-link" onclick="showPage('fire')">
           <div class="card">
-            <img src="fireaccident.jpg" alt="Fire Safety" class="card-img">
+            <img src="fireaccident.jpg" alt="fireaccident" class="card-img">
             <h3>🔥 Fire Safety</h3>
           </div>
         </div>
 
         <div class="card-link" onclick="showPage('accidents')">
           <div class="card">
-            <img src="road.jpg" alt="Road Accidents" class="card-img">
+            <img src="road.jpg" alt="road" class="card-img">
             <h3>🚗 Road Accidents</h3>
           </div>
         </div>
 
         <div class="card-link" onclick="showPage('firstaid')">
           <div class="card">
-            <img src="firstaid.jpg" alt="First Aid" class="card-img">
+            <img src="firstaid.jpg" alt="firstaid" class="card-img">
             <h3>💉 First Aid</h3>
           </div>
         </div>
@@ -110,8 +110,8 @@
   </ol>
 
   <div class="video-container">
-    <video controls width="100%" poster="extinguisher-demo.jpg">
-      <source src="video/Fire Extinguisher.mp4" type="video/mp4">
+    <video controls width="100%" poster="image/extinguisher-demo.jpg">
+      <source src="Fire Extinguisher.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
     <p class="video-credit">🎥 Video courtesy of <a href="https://www.youtube.com/watch?v=BLjoWjCrDqg" target="_blank">U.S. Fire Administration</a></p>
@@ -445,6 +445,7 @@
 </section>
 
 <footer>
+    <button id="toggle-footer-btn" class="footer-toggle-btn">⬇</button>
   <section class="bottom-hotline">
     <h2>🚨 Quick Access Hotlines</h2>
     <div class="hotline-list">
@@ -512,7 +513,6 @@ document.getElementById("hotline-map").addEventListener("click", function (event
     button.innerText = "📍 View Nearest Hospital";
   }
 });
-
 </script>
 
 
@@ -560,8 +560,24 @@ document.getElementById("hotline-map").addEventListener("click", function (event
     else{window.addEventListener("load",onLoad)}
   })();
   </script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const footer = document.querySelector("footer");
+  const toggleBtn = document.getElementById("toggle-footer-btn");
+
+  toggleBtn.addEventListener("click", function () {
+    footer.classList.toggle("hidden-footer");
+
+    if (footer.classList.contains("hidden-footer")) {
+      toggleBtn.textContent = "⬆"; // show
+    } else {
+      toggleBtn.textContent = "⬇"; // hide
+    }
+  });
+});
+</script>
+
+
 </body>
 </html>
-
-
-
