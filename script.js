@@ -28,7 +28,7 @@
 
  
   const defaultHotlines = {
-    fire: "160",
+    fire: "160", 
     police: "166",
     ambulance: "911",
     redcross: "143",
@@ -270,6 +270,7 @@ closeChatbot.addEventListener('click', () => {
   chatbotOverlay.style.display = 'none';
   document.body.style.overflow = 'auto';
 });
+
 
 })();
 
