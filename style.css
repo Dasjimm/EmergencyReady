@@ -747,22 +747,23 @@ footer {
 body {
   overflow-x: hidden;
 }
-/* Smaller footer for mobile */
 @media (max-width: 600px) {
   footer {
-    padding: 4px 10px; 
-    font-size: 0.7rem;
+    padding: 10px 15px;   /* smaller height */
+    font-size: 0.85rem;   /* smaller text */
+    height: auto;         /* let it shrink naturally */
   }
 
-  .bottom-hotline h2 {
-    font-size: 0.7rem;
+  .hotline-list {
+    gap: 6px;   /* smaller spacing */
   }
 
   .hotline-item {
-    padding: 6px 10px;
-    font-size: 0.7rem;
-    border-radius: 15px;
+    padding: 8px 12px;   /* smaller buttons */
+    font-size: 0.8rem;
   }
+}
+
 
   /* More space at the bottom of content so last card is visible */
   main, 
@@ -771,5 +772,6 @@ body {
     padding-bottom: 120px !important;
   }
 }
+
 
 
