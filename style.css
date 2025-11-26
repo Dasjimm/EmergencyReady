@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #dddada, #ffffff) !important;
+  background: linear-gradient(135deg, #000000, #640101) !important;
   color: #333;
   min-height: 100vh;
   display: flex;
@@ -477,7 +477,7 @@ body {
 .card h3 {
   margin: 15px 0;
   font-size: 1.3rem;
-  color: #f9f7f7;
+  color: #f6f1f1;
 }
 
 
@@ -747,32 +747,66 @@ footer {
 body {
   overflow-x: hidden;
 }
+/* Smaller footer for mobile */
 @media (max-width: 600px) {
-  .bottom-hotline,
-  #hotlines,
-  .hotline-footer,
   footer {
-    margin-top: 60px !important;  /* moves the hotline footer downward */
+    padding: 4px 10px; 
+    font-size: 0.7rem;
   }
-}
 
-
-  .hotline-list {
-    gap: 6px;   /* smaller spacing */
+  .bottom-hotline h2 {
+    font-size: 0.7rem;
   }
 
   .hotline-item {
-    padding: 8px 12px;   /* smaller buttons */
-    font-size: 0.8rem;
+    padding: 6px 10px;
+    font-size: 0.7rem;
+    border-radius: 15px;
   }
-}
-
 
   /* More space at the bottom of content so last card is visible */
   main, 
   .content-box,
   .container {
     padding-bottom: 120px !important;
+  }
+}
+
+/* MOBILE ONLY */
+@media (max-width: 600px) {
+
+  footer {
+    transition: transform 0.5s ease;
+    z-index: 999;
+  }
+
+  /* Slide footer down (hide) */
+  footer.hidden-footer {
+    transform: translateY(80%);
+  }
+
+  /* Arrow button attached to footer */
+  .footer-toggle-btn {
+    display: block; /* show on mobile */
+    position: absolute;
+    top: 0; /* attach at top of footer */
+    left: 0%;
+    width: 10%;
+    border: none;
+    padding: 10px 0;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #660000;
+    color: #fff;
+    box-shadow: 0 -2px 4px rgba(255, 252, 252, 0.2);
+    border-radius: 0; /* remove oval/circle */
+  }
+}
+
+/* DESKTOP: hide the toggle button */
+@media (min-width: 601px) {
+  .footer-toggle-btn {
+    display: none; /* hide on desktop */
   }
 }
 
